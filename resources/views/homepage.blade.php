@@ -15,11 +15,16 @@
     <div class="logo">
       <a href="{{ url('/') }}">
         <img src="{{ asset('frontend/img/download.jfif') }}" alt="Company Logo" style="width: 90px; height: 100px;"></a>
-    
+
     </div>
     <nav class="navbar-icons">
       <a href="#"><img src="{{('frontend/img/grocery-store.png') }}" alt="Cart">Cart</a>
-      <a href="#"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Login">LogIn </a>
+      @guest
+      <a href="{{ route('login') }}"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Login">LogIn</a>
+      @else
+      <a href="{{ route('home') }}"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Profile">Profile</a>
+      @endguest
+
     <a href="{{ url('/products') }}"> <img src="{{ asset('frontend/img/contact-us.png') }}" alt="Products">Products</a>
     </nav>
   </header>
@@ -44,39 +49,47 @@
 
   <!-- Product listing section -->
 <section class="product-listing">
-  <h2>Product Listing</h2>
-  <!-- Product 1 -->
-  <div class="product">
-    <img src="{{ asset('frontend/img/20 litter.jpg') }}" alt="Product 1">
-    <h3>Product 1</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <span>$49.99</span>
-    <button>Add to Cart</button>
-  </div>
+    <h2>Product Listing</h2>
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="{{ asset('frontend/img/20 litter.jpg') }}" alt="Product 1">
+      <h3> 10 Liter Watter Bottle</h3>
+      <p>10 Ltr.</p>
+      <span>80 Taka</span>
+      <button>Add to Cart</button>
+    </div>
 
-  <!-- Product 2 -->
-  <div class="product">
-    <img src="{{ asset('frontend/img/30 litter.jpg') }}" alt="Product 2">
-    <h3>Product 2</h3>
-    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <span>$29.99</span>
-    <button>Add to Cart</button>
-  </div>
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="{{ asset('frontend/img/30 litter.jpg') }}" alt="Product 2">
+      <h3>30  Liter Water Can</h3>
+      <p>30 Ltr</p>
+      <span>90 Taka</span>
+      <button>Add to Cart</button>
+    </div>
 
-  <!-- Product 3 -->
-  <div class="product">
-    <img src="{{ asset('frontend/img/40 litter.jpg') }}" alt="Product 3">
-    <h3>Product 3</h3>
-    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <span>$29.99</span>
-    <button>Add to Cart</button>
-  </div>
-  <div class="show-all-products">
-    <a href="{{ url('/products') }}">
-      <button>Show All Products</button>
-    </a>
-  </div>
-</section>
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="{{ asset('frontend/img/40 litter.jpg') }}" alt="Product 3">
+      <h3>40 Liter Water Can</h3>
+      <p>40 Ltr</p>
+      <span>110Taka</span>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="{{ asset('frontend/img/1litter.jpg') }}" alt="Product 3">
+      <h3>1 liter Water Bottles</h3>
+      <p>Case Of 9 Bottles</p>
+      <span>225 Taka</span>
+      <button>Add to Cart</button>
+    </div>
+    <div class="show-all-products">
+      <a href="{{ url('/products') }}">
+        <button>Show All Products</button>
+      </a>
+    </div>
+  </section>
 
   <!-- Stay Hydrated and Stay Fresh section -->
   <section class="stay-hydrated-section">
@@ -125,7 +138,7 @@
       </div>
     </div>
   </footer>
-  
+
 
 
 <!-- JavaScript -->

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProducrtsController;
 use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\UserDashboardController; // Import the UserDashboardController
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,12 @@ use App\Http\Controllers\SubscribeController;
 Route::get('/products', [ProducrtsController::class, 'index']);
 Route::get('/subscribe', [SubscribeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
+
+// Define the user dashboard route
+Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('user.dashboard');
+
+// Redirect users to the user dashboard after successful login
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
