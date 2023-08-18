@@ -12,9 +12,9 @@ class UserDashboardController extends Controller
 
     public function index()
     {
-        // Fetch user-specific data, if needed
+                // Fetch user-specific data, if needed
         $userData = auth()->user(); // Example: get authenticated user's data
 
-        return view('user.dashboard', compact('userData')); // Return the dashboard view
+        return view('dashboard', compact('userData')); // Load the existing dashboard.blade.php view
     }
 }

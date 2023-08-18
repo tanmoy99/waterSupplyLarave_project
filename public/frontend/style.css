@@ -13,7 +13,7 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  background-color: #4f43f1dc;
+  background-color: rgb(19,182,151);
   height: 90px;
   padding: 0 20px;
 }
@@ -244,7 +244,7 @@ body {
 
 /* Navbar styles */
 .navbar {
-  background-color: #786ff1;
+  background-color: rgb(19,182,151);
   color: #fff;
   padding: 10px;
 }
@@ -384,3 +384,32 @@ footer {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+.product img{
+    height: 160px;
+    width: 120px;
+  }
+  #fanta img {
+    height: 200px;
+    width: 200px;
+  }
+  #dew img {
+    height: 200px;
+    width: 60px;
+  }
+  #coke img {
+    height: 200px;
+    width: 90px;
+  }
+  #can_7up img {
+    height: 200px;
+    width: 150px;
+  }
+  #sprite img {
+    height: 200px;
+    width: 70px;
+
+  }
+  #up img{
+    height: 200px;
+    width: 150px;
+  }

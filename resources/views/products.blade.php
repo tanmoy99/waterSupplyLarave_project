@@ -33,8 +33,15 @@
     </div>
     <nav class="navbar-icons">
       <a href="#"><img src="{{('frontend/img/grocery-store.png') }}" alt="Cart">Cart</a>
-      <a href="#"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Login">LogIn </a>
-      <a href="{{ url('/products') }}"> <img src="{{ asset('frontend/img/contact-us.png') }}" alt="Products">Products</a>
+      <nav class="navbar-icons">
+        @guest
+        <a href="{{ route('login') }}"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Login">LogIn</a>
+        @else
+        <a href="{{ route('user.dashboard') }}"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Profile">Profile</a>
+        @endguest
+
+      <a href="{{ url('/products') }}"> <img src="{{ asset('frontend/img/product.png') }}" alt="Products">Products</a>
+      <a href="{{ url('/aboutUs') }}"> <img src="{{ asset('frontend/img/contact-us.png') }}" alt="Products">ABOUT US</a>
     </nav>
   </header>
 
@@ -42,66 +49,120 @@
     <div class="product-category">
       <h2>Marchents</h2>
       <!-- Add Machinist product items here -->
+      <section class="product-listing">
+        <!-- Product 1 -->
+        <div class="product" id="pureit">
+          <img src="{{ asset('frontend/img/pure_it.png') }}" alt="Product 1">
+          <h3>Unilever Pureit Classic Water Purifier 23L</h3>
+          <p>Water Purifier 23L</p>
+          <span>5000 Taka</span>
+          <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product" id="water_dispensar">
+          <img src="{{ asset('frontend/img/water_dispensar.png') }}" alt="Product 2">
+          <h3>Water Dispensar</h3>
+          <p>25L Bottle Water Dispenser</p>
+          <span>3000 Taka</span>
+          <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product" id="paper_cup">
+          <img src="{{ asset('frontend/img/paper_cup.png') }}" alt="Product 3">
+          <h3>Recyclable Paper Cup </h3>
+          <p>100 pcs</p>
+          <span>50 Taka</span>
+          <button>Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product" id="black_mug">
+          <img src="{{ asset('frontend/img/black_mug.png') }}" alt="Product 4">
+          <h3>Black Mug </h3>
+          <p>1 pcs</p>
+          <span>550 Taka</span>
+          <button>Add to Cart</button>
+        </div>
+                <!-- Product 5 -->
+                <div class="product" id="paper_coffee_cup" >
+                  <img src="{{ asset('frontend/img/paper_coffee_cup.png') }}" alt="Product 5">
+                  <h3>One time Coffee Cup</h3>
+                  <p>12 pcs</p>
+                  <span>100 Taka</span>
+                  <button>Add to Cart</button>
+                </div>
+                        <!-- Product 6 -->
+        <div class="product" id="metal_bottle">
+          <img src="{{ asset('frontend/img/metal_bottle.png') }}" alt="Product 6">
+          <h3>Metal Water Bottle</h3>
+          <p>1L Metal body thermoflusk bottle</p>
+          <span>800 Taka</span>
+          <button>Add to Cart</button>
+        </div>
+      </section>
+
     </div>
 
     <div class="product-category">
-      <h2>Soft Drinks</h2>
-      <!-- Add Soft Drinks product items here -->
-        <!-- Product listing section -->
-        <section class="product-listing">
-          <!-- Product 1 -->
-          <div class="product">
-            <img src="{{ asset('frontend/img/20 litter.jpg') }}" alt="Product 1">
-            <h3>10 Liter Water Bottle</h3>
-            <p>10 Ltr.</p>
-            <span>80 Taka</span>
-            <button>Add to Cart</button>
-          </div>
+        <h2>Soft Drinks</h2>
+        <!-- Add Soft Drinks product items here -->
+          <!-- Product listing section -->
+          <section class="product-listing">
+            <!-- Product 1 -->
+            <div class="product" id="up">
+              <img src="{{ asset('frontend/img/7up.png') }}" alt="Product 1">
+              <h3>7up 1 Ltr Bottle</h3>
+              <p>Single</p>
+              <span>100 Taka</span>
+              <button>Add to Cart</button>
+            </div>
 
-          <!-- Product 2 -->
-          <div class="product">
-            <img src="{{ asset('frontend/img/30 litter.jpg') }}" alt="Product 2">
-            <h3>30 Liter Water Can</h3>
-            <p>30 Ltr</p>
-            <span>90 Taka</span>
-            <button>Add to Cart</button>
-          </div>
+            <!-- Product 2 -->
+            <div class="product" id="can_7up">
+              <img src="{{ asset('frontend/img/7up_can.png') }}" alt="Product 2">
+              <h3>7up can 125 ml</h3>
+              <p>Single</p>
+              <span>60 Taka</span>
+              <button>Add to Cart</button>
+            </div>
 
-          <!-- Product 3 -->
-          <div class="product">
-            <img src="{{ asset('frontend/img/40 litter.jpg') }}" alt="Product 3">
-            <h3>40 Liter Water Can</h3>
-            <p>40 Ltr</p>
-            <span>110 Taka</span>
-            <button>Add to Cart</button>
-          </div>
-          <!-- Product 4 -->
-          <div class="product">
-            <img src="{{ asset('frontend/img/1litter.jpg') }}" alt="Product 4">
-            <h3>1 Liter Water Bottles</h3>
-            <p>Case Of 9 Bottles</p>
-            <span>225 Taka</span>
-            <button>Add to Cart</button>
-          </div>
-                  <!-- Product 4 -->
-                  <div class="product">
-                    <img src="{{ asset('frontend/img/2ltr.jpg') }}" alt="Product 4">
-                    <h3>2 Liter Water Bottles</h3>
-                    <p>Case Of 6 Bottles</p>
-                    <span>240 Taka</span>
-                    <button>Add to Cart</button>
-                  </div>
-                          <!-- Product 4 -->
-          <div class="product">
-            <img src="{{ asset('frontend/img/500-ml-.jpg') }}" alt="Product 4">
-            <h3>500 ML Water Bottles</h3>
-            <p>Case Of 24 Bottles</p>
-            <span>480 Taka</span>
-            <button>Add to Cart</button>
-          </div>
-        </section>
+            <!-- Product 3 -->
+            <div class="product" id="coke">
+              <img src="{{ asset('frontend/img/coke_1L.png') }}" alt="Product 3">
+              <h3>Cocacola 1.25L</h3>
+              <p>Single</p>
+              <span>110 Taka</span>
+              <button>Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product" id="dew">
+              <img src="{{ asset('frontend/img/dew_1L.png') }}" alt="Product 4">
+              <h3>Mountain Dew </h3>
+              <p>Case Of 6 Bottles</p>
+              <span>550 Taka</span>
+              <button>Add to Cart</button>
+            </div>
+                    <!-- Product 5 -->
+                    <div class="product" id="fanta" >
+                      <img src="{{ asset('frontend/img/fanta_1L.png') }}" alt="Product 5">
+                      <h3>Fanta 1L</h3>
+                      <p>Single</p>
+                      <span>90 Taka</span>
+                      <button>Add to Cart</button>
+                    </div>
+                            <!-- Product 6 -->
+            <div class="product" id="sprite">
+              <img src="{{ asset('frontend/img/sprite.png') }}" alt="Product 6">
+              <h3>Sprite 1L</h3>
+              <p>Single</p>
+              <span>90 Taka</span>
+              <button>Add to Cart</button>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+
 
     <div class="product-category">
       <h2>Water Bottles</h2>

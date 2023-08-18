@@ -22,10 +22,12 @@
       @guest
       <a href="{{ route('login') }}"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Login">LogIn</a>
       @else
-      <a href="{{ route('home') }}"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Profile">Profile</a>
+      <a href="{{ route('user.dashboard') }}"><img src="{{ asset('frontend/img/avatar.png') }}" alt="Profile">Profile</a>
       @endguest
 
-    <a href="{{ url('/products') }}"> <img src="{{ asset('frontend/img/contact-us.png') }}" alt="Products">Products</a>
+
+    <a href="{{ url('/products') }}"> <img src="{{ asset('frontend/img/product.png') }}" alt="Products">Products</a>
+    <a href="{{ url('/aboutUs') }}"> <img src="{{ asset('frontend/img/contact-us.png') }}" alt="Products">ABOUT US</a>
     </nav>
   </header>
 
@@ -131,7 +133,7 @@
           </div>
         </div>
         <div class="footer-right">
-          <a href="#">About Us</a>
+         <a href="{{ route('about') }}">About Us</a>
           <a href="#">Contact Us</a>
           <a href="#">Terms of Service</a>
         </div>
@@ -159,6 +161,5 @@
     });
   });
 </script>
-  </script>
 </body>
 </html>
