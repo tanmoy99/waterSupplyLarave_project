@@ -6,30 +6,9 @@ body, h1, h2, h3, p, ul, li {
 
 /* Basic styling */
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-.navbar {
-    list-style: none;
-}
-
-.navbar li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-}
 
 .main {
     padding: 2rem;
@@ -37,7 +16,7 @@ header {
 
 .motto {
     text-align: center;
-    margin: 2rem 0;
+    margin: 35px;
 }
 
 .collaborators {
@@ -53,7 +32,7 @@ header {
 }
 
 .teammate img {
-    max-width: 100%;
+
     border-radius: 50%;
 }
 
@@ -62,4 +41,66 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+/* Apply basic styles to the contact form */
+/* Center the contact form horizontally and limit width to 50% */
+.contact-form {
+    margin: 20px auto; /* Center horizontally */
+    width: 50%; /* Use 50% of the width */
+    padding: 20px;
+    border: 1px solid #b5b4b4;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for responsiveness (adjust breakpoints as needed) */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 15px;
+    }
 }
